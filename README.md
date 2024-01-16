@@ -7,9 +7,12 @@ This repository is the official implementation of [Vlogger](https://arxiv.org/ab
 
 **[Vlogger: Make Your Dream A Vlog](https://arxiv.org/abs/2310.20700)**
 
+https://youtu.be/ZRD1-jHbEGk
 
-<img src="https://youtu.be/ZRD1-jHbEGk">
-
+<video controls>
+  <source src="https://youtu.be/ZRD1-jHbEGk" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 ##  Setup
 
