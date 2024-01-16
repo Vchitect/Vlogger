@@ -7,12 +7,8 @@ This repository is the official implementation of [Vlogger](https://arxiv.org/ab
 
 **[Vlogger: Make Your Dream A Vlog](https://arxiv.org/abs/2310.20700)**
 
-https://youtu.be/ZRD1-jHbEGk
 
-<video controls>
-  <source src="https://youtu.be/ZRD1-jHbEGk" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<iframe width="748" height="422" src="https://youtu.be/ZRD1-jHbEGk" title="AI&#39;s Premiere: Mr. Polar Bear&#39;s Fantastic Journey | The First 3-Min All-AI-Produced Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ##  Setup
 
