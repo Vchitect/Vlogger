@@ -1,0 +1,39 @@
+# path:
+ckpt: "/mnt/petrelfs/zhuangshaobin/pnp/s2l/ckpt/tca_prediction_12000_62000.pt"
+pretrained_model_path: "/mnt/petrelfs/zhuangshaobin/pnp/Large-DiT-Video-Images-V2/sd_model/"
+image_encoder_path: "/mnt/petrelfs/zhuangshaobin/s2l/Large-DiT-Video-Images-V2/image_encoder"
+save_path: "./results/vlog/teddy_travel/video"
+
+# script path
+reference_image_path: ["./results/vlog/teddy_travel/ref_img/teddy.jpg"]
+script_file_path: "./results/vlog/teddy_travel/script/video_prompts.txt"
+zh_script_file_path: "./results/vlog/teddy_travel/script/zh_video_prompts.txt"
+protagonist_file_path: "./results/vlog/teddy_travel/script/protagonists_places.txt"
+reference_file_path: "./results/vlog/teddy_travel/script/protagonist_place_reference.txt"
+time_file_path: "./results/vlog/teddy_travel/script/time_scripts.txt"
+video_transition: False
+
+# model config:
+model: UNet
+num_frames: 16
+image_size: [320, 512]
+negative_prompt: "white background"
+
+# sample config:
+ref_cfg_scale: 0.3
+seed: 3407
+guidance_scale: 7.5
+cfg_scale: 8.0
+sample_method: 'ddim'
+num_sampling_steps: 100
+researve_frame: 3
+mask_type: "first3"
+use_mask: True
+use_fp16: True
+enable_xformers_memory_efficient_attention: True
+do_classifier_free_guidance: True
+fps: 8
+sample_num: 
+
+# model speedup
+use_compile: False

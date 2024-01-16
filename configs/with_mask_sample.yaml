@@ -1,0 +1,33 @@
+# path config:
+ckpt: "/mnt/petrelfs/zhuangshaobin/pnp/s2l/ckpt/tca_prediction_12000_62000.pt"
+pretrained_model_path: "/mnt/petrelfs/zhuangshaobin/pnp/Large-DiT-Video-Images-V2/sd_model/"
+input_path: 'input/i2v/Planet_hits_earth.png'
+save_path: "results/mask_no_ref/"
+
+# model config: 
+model: UNet
+num_frames: 16
+# image_size: [320, 512]
+image_size: [240, 560]
+
+# model speedup
+use_fp16: True
+enable_xformers_memory_efficient_attention: True
+
+# sample config:
+seed: 3407
+cfg_scale: 8.0
+sample_method: 'ddim'
+num_sampling_steps: 100
+text_prompt: [
+              # "Cinematic photograph. View of piloting aaero.",
+              # "A fish swims past an oriental woman.",
+              # "A big drop of water falls on a rose petal.",
+              # "Underwater environment cosmetic bottles.".
+              "Planet hits earth.",
+              ]
+additional_prompt: ""
+negative_prompt: ""
+do_classifier_free_guidance: True
+mask_type: "first1"
+use_mask: True

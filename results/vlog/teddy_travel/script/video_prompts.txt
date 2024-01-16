@@ -1,0 +1,98 @@
+[
+ {
+  "video fragment id": 1,
+  "video fragment description": "Teddy is planning on paper."
+ },
+ {
+  "video fragment id": 2, 
+  "video fragment description": "The globe rotates with various locations in the background."
+ }, 
+ {
+  "video fragment id": 3, 
+  "video fragment description": "Teddy sitting in the airport lobby."
+ }, 
+ {
+  "video fragment id": 4, 
+  "video fragment description": "The plane took off from the runway."
+ }, 
+ {
+  "video fragment id": 5, 
+  "video fragment description": "Teddy arrives in Paris."
+ },
+ {
+  "video fragment id": 6, 
+  "video fragment description": "Teddy under the Eiffel Tower."
+ },
+ {
+  "video fragment id": 7, 
+  "video fragment description": "Teddy is enjoying a picnic."
+ },
+ {
+  "video fragment id": 8, 
+  "video fragment description": "Arrive at the Great Wall."
+ },
+ {
+  "video fragment id": 9, 
+  "video fragment description": "Teddy climbs the Great Wall."
+ }, 
+ {
+  "video fragment id": 10, 
+  "video fragment description": "Teddy watches the scenery from the Great Wall."
+ },
+ {
+  "video fragment id": 11, 
+  "video fragment description": "Teddy leaves the Great Wall."
+ },
+ {
+  "video fragment id": 12, 
+  "video fragment description": "Teddy is sitting on the bus, the scenery outside the window is beautiful."
+ },
+ {
+  "video fragment id": 13, 
+  "video fragment description": "Planes fly over the sky."
+ },
+ {
+  "video fragment id": 14, 
+  "video fragment description": "Teddy lands in a sandy landscape."
+ },
+ {
+  "video fragment id": 15, 
+  "video fragment description": "Pyramids gradually appeared in front of Teddy."
+ },
+ {
+  "video fragment id": 16, 
+  "video fragment description": "Teddy is entering the pyramid."
+ },
+ {
+  "video fragment id": 17, 
+  "video fragment description": "Teddy walks in the dark corridor."
+ },
+ {
+  "video fragment id": 18, 
+  "video fragment description": "Teddy suddenly walked into a bright room."
+ },
+ {
+  "video fragment id": 19, 
+  "video fragment description": "A treasure is revealed."
+ },
+ {
+  "video fragment id": 20, 
+  "video fragment description": "Teddy found his master with the treasure."
+ },
+ {
+  "video fragment id": 21, 
+  "video fragment description": "Room is filled with adventure mementos."
+ },
+ {
+  "video fragment id": 22, 
+  "video fragment description": "Teddy is looking at his mementos and camera rotation."
+ },
+ {
+  "video fragment id": 23, 
+  "video fragment description": "The globe gradually stopped rotating and the background gradually turned black."
+ },
+ {
+  "video fragment id": 24, 
+  "video fragment description": "Teddy sits in a chair and dreams about his next travels."
+ }
+]

@@ -1,0 +1,98 @@
+[
+{
+"video fragment id": 1,
+"time": 6
+},
+{
+"video fragment id": 2,
+"time": 10
+},
+{
+"video fragment id": 3,
+"time": 6
+},
+{
+"video fragment id": 4,
+"time": 7
+},
+{
+"video fragment id": 5,
+"time": 8
+},
+{
+"video fragment id": 6,
+"time": 6
+},
+{
+"video fragment id": 7,
+"time": 8
+},
+{
+"video fragment id": 8,
+"time": 9
+},
+{
+"video fragment id": 9,
+"time": 7
+},
+{
+"video fragment id": 10,
+"time": 8
+},
+{
+"video fragment id": 11,
+"time": 7
+},
+{
+"video fragment id": 12,
+"time": 10
+},
+{
+"video fragment id": 13,
+"time": 7
+},
+{
+"video fragment id": 14,
+"time": 6
+},
+{
+"video fragment id": 15,
+"time": 8
+},
+{
+"video fragment id": 16,
+"time": 5
+},
+{
+"video fragment id": 17,
+"time": 8
+},
+{
+"video fragment id": 18,
+"time": 6
+},
+{
+"video fragment id": 19,
+"time": 9
+},
+{
+"video fragment id": 20,
+"time": 6
+},
+{
+"video fragment id": 21,
+"time": 7
+},
+{
+"video fragment id": 22,
+"time": 8
+},
+{
+"video fragment id": 23,
+"time": 10
+},
+{
+"video fragment id": 24,
+"time": 6
+}
+]

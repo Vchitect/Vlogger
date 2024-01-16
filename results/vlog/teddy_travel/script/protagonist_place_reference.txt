@@ -1,0 +1,98 @@
+[
+{
+    "video segment id": 1,
+    "character/place id": [1],
+},
+{
+    "video segment id": 2,
+    "character/place id": [0],
+},
+{
+    "video segment id": 3,
+    "character/place id": [1],
+},
+{
+    "video segment id": 4,
+    "character/place id": [0],
+},
+{
+    "video segment id": 5,
+    "character/place id": [1],
+},
+{
+    "video segment id": 6,
+    "character/place id": [1],
+},
+{
+    "video segment id": 7,
+    "character/place id": [1],
+},
+{
+    "video segment id": 8,
+    "character/place id": [0],
+},
+{
+    "video segment id": 9,
+    "character/place id": [1],
+},
+{
+    "video segment id": 10,
+    "character/place id": [1],
+},
+{
+    "video segment id": 11,
+    "character/place id": [1],
+},
+{
+    "video segment id": 12,
+    "character/place id": [1],
+},
+{
+    "video segment id": 13,
+    "character/place id": [0],
+},
+{
+    "video segment id": 14,
+    "character/place id": [1],
+},
+{
+    "video segment id": 15,
+    "character/place id": [1],
+},
+{
+    "video segment id": 16,
+    "character/place id": [1],
+},
+{
+    "video segment id": 17,
+    "character/place id": [1],
+},
+{
+    "video segment id": 18,
+    "character/place id": [1],
+},
+{
+    "video segment id": 19,
+    "character/place id": [0],
+},
+{
+    "video segment id": 20,
+    "character/place id": [1],
+},
+{
+    "video segment id": 21,
+    "character/place id": [0],
+},
+{
+    "video segment id": 22,
+    "character/place id": [1],
+},
+{
+    "video segment id": 23,
+    "character/place id": [0],
+},
+{
+    "video segment id": 24,
+    "character/place id": [1],
+}
+]

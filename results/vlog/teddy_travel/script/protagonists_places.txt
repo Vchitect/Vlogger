@@ -1,0 +1,7 @@
+[
+{
+    "id": 1,
+    "name": "Teddy",
+    "description": "Teddy is a brown teddy bear with a friendly smile."
+}
+]

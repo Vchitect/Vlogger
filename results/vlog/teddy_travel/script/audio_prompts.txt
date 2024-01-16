@@ -1,0 +1,98 @@
+[
+ {
+  "video fragment id": 1,
+  "video fragment description": "Teddy is planning on paper."
+ },
+ {
+  "video fragment id": 2, 
+  "video fragment description": "He will travel around the world and explore every corner."
+ }, 
+ {
+  "video fragment id": 3, 
+  "video fragment description": "Teddy came to the airport lobby, surrounded by people coming and going."
+ }, 
+ {
+  "video fragment id": 4, 
+  "video fragment description": "Teddy's plane took off slowly from the airport and headed to his first destination.."
+ }, 
+ {
+  "video fragment id": 5, 
+  "video fragment description": "Teddy arrives in Paris."
+ },
+ {
+  "video fragment id": 6, 
+  "video fragment description": "Teddy came to the Eiffel Tower because of its reputation."
+ },
+ {
+  "video fragment id": 7, 
+  "video fragment description": "Teddy took out the picnic cloth and prepared food on the lawn and started enjoying lunch."
+ },
+ {
+  "video fragment id": 8, 
+  "video fragment description": "The scene turned and we came to the Great Wall of China."
+ },
+ {
+  "video fragment id": 9, 
+  "video fragment description": "Teddy was very excited and worked hard to climb the Great Wall."
+ }, 
+ {
+  "video fragment id": 10, 
+  "video fragment description": "Finally reaching the top, Teddy looked at the scenery in the distance."
+ },
+ {
+  "video fragment id": 11, 
+  "video fragment description": "It's getting late and Teddy is leaving too."
+ },
+ {
+  "video fragment id": 12, 
+  "video fragment description": "Teddy is sitting on the bus, preparing to rush to the next destination."
+ },
+ {
+  "video fragment id": 13, 
+  "video fragment description": "The plane flies across the sky again."
+ },
+ {
+  "video fragment id": 14, 
+  "video fragment description": "This time Teddy came to the desert of Egypt."
+ },
+ {
+  "video fragment id": 15, 
+  "video fragment description": "Teddy was running wildly in the desert, and the pyramid suddenly appeared in front of him."
+ },
+ {
+  "video fragment id": 16, 
+  "video fragment description": "He hesitated for a moment before entering the pyramid."
+ },
+ {
+  "video fragment id": 17, 
+  "video fragment description": "When he enter the pyramid, he have to walk through a dark corridor."
+ },
+ {
+  "video fragment id": 18, 
+  "video fragment description": "While walking, he suddenly came to a bright room."
+ },
+ {
+  "video fragment id": 19, 
+  "video fragment description": "It turns out there is a hidden treasure waiting to be discovered by the destined person."
+ },
+ {
+  "video fragment id": 20, 
+  "video fragment description": "Teddy found his master with the treasure, and his master smiled broadly"
+ },
+ {
+  "video fragment id": 21, 
+  "video fragment description": "The house is filled with things Teddy brought back."
+ },
+ {
+  "video fragment id": 22, 
+  "video fragment description": "Teddy is surrounded by things and still immersed in the joy of traveling."
+ },
+ {
+  "video fragment id": 23, 
+  "video fragment description": "But everything has an end, and this journey will eventually come to an end.."
+ },
+ {
+  "video fragment id": 24, 
+  "video fragment description": "Teddy is sitting on the chair. Where will he go next time?"
+ }
+]
