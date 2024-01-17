@@ -196,6 +196,15 @@ For example:
 
 ## BibTeX
 ```bibtex
+@article{zhuang2024vlogger,
+title={Vlogger: Make Your Dream A Vlog},
+author={Zhuang, Shaobin and Li, Kunchang and Chen, Xinyuan and Wang, Yaohui and Liu, Ziwei and Qiao, Yu and Wang, Yali},
+journal={arXiv preprint arXiv:2310.20700},
+year={2024}
+}
+```
+
+```bibtex
 @article{chen2023seine,
 title={SEINE: Short-to-Long Video Diffusion Model for Generative Transition and Prediction},
 author={Chen, Xinyuan and Wang, Yaohui and Zhang, Lingjun and Zhuang, Shaobin and Ma, Xin and Yu, Jiashuo and Wang, Yali and Lin, Dahua and Qiao, Yu and Liu, Ziwei},
