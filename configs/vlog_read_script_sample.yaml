@@ -1,16 +1,16 @@
 # path:
-ckpt: "/mnt/petrelfs/zhuangshaobin/pnp/s2l/ckpt/tca_prediction_12000_62000.pt"
-pretrained_model_path: "/mnt/petrelfs/zhuangshaobin/pnp/Large-DiT-Video-Images-V2/sd_model/"
-image_encoder_path: "/mnt/petrelfs/zhuangshaobin/s2l/Large-DiT-Video-Images-V2/image_encoder"
-save_path: "./results/vlog/teddy_travel/video"
+ckpt: "pretrained/ShowMaker.pt"
+pretrained_model_path: "pretrained/stable-diffusion-v1-4/"
+image_encoder_path: "pretrained/OpenCLIP-ViT-H-14"
+save_path: "results/vlog/teddy_travel/video"
 
 # script path
-reference_image_path: ["./results/vlog/teddy_travel/ref_img/teddy.jpg"]
-script_file_path: "./results/vlog/teddy_travel/script/video_prompts.txt"
-zh_script_file_path: "./results/vlog/teddy_travel/script/zh_video_prompts.txt"
-protagonist_file_path: "./results/vlog/teddy_travel/script/protagonists_places.txt"
-reference_file_path: "./results/vlog/teddy_travel/script/protagonist_place_reference.txt"
-time_file_path: "./results/vlog/teddy_travel/script/time_scripts.txt"
+reference_image_path: ["results/vlog/teddy_travel/ref_img/teddy.jpg"]
+script_file_path: "results/vlog/teddy_travel/script/video_prompts.txt"
+zh_script_file_path: "results/vlog/teddy_travel/script/zh_video_prompts.txt"
+protagonist_file_path: "results/vlog/teddy_travel/script/protagonists_places.txt"
+reference_file_path: "results/vlog/teddy_travel/script/protagonist_place_reference.txt"
+time_file_path: "results/vlog/teddy_travel/script/time_scripts.txt"
 video_transition: False
 
 # model config:

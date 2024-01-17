@@ -170,18 +170,11 @@ class UNet3DConditionModel(ModelMixin, ConfigMixin):
         self.mid_block = None
         self.up_blocks = nn.ModuleList([])
 
-        # print(only_cross_attention)
-        # print(type(only_cross_attention))
-        # exit()
         if isinstance(only_cross_attention, bool):
             only_cross_attention = [only_cross_attention] * len(down_block_types)
-            # print(only_cross_attention)
-            # exit()
 
         if isinstance(attention_head_dim, int):
             attention_head_dim = (attention_head_dim,) * len(down_block_types)
-            # print(attention_head_dim)
-            # exit()
 
         rotary_emb = RotaryEmbedding(32)
 
@@ -548,110 +541,6 @@ class UNet3DConditionModel(ModelMixin, ConfigMixin):
         cond_eps, uncond_eps = torch.split(eps, len(eps) // 2, dim=0)
         half_eps = uncond_eps + cfg_scale * (cond_eps - uncond_eps)
         eps = torch.cat([half_eps, half_eps], dim=0)
-        return torch.cat([eps, rest], dim=1)
-    
-
-    def forward_with_cfg_2text(self,
-                        x,
-                        t,
-                        encoder_hidden_states=None,
-                        encoder_hidden_states_=None,
-                        class_labels: Optional[torch.Tensor] = None,
-                        cfg_scale=4.0,
-                        use_fp16=False,
-                        use_mask=False):
-        """
-        Forward pass of DiT, but also batches the unconditional forward pass for classifier-free guidance.
-        """
-        # https://github.com/openai/glide-text2im/blob/main/notebooks/text2im.ipynb
-        half = x[: len(x) // 2]
-        combined = torch.cat([half, half], dim=0)
-        if use_fp16:
-            combined = combined.to(dtype=torch.float16)
-        model_out = self.forward(combined, t, encoder_hidden_states, class_labels).sample
-        model_out_ = self.forward(combined, t, encoder_hidden_states_, class_labels).sample
-        # For exact reproducibility reasons, we apply classifier-free guidance on only
-        # three channels by default. The standard approach to cfg applies it to all channels.
-        # This can be done by uncommenting the following line and commenting-out the line following that.
-        eps, rest = model_out[:, :4], model_out[:, 4:]
-        eps_, rest_ = model_out_[:, :4], model_out_[:, 4:]
-        # eps, rest = model_out[:, :3], model_out[:, 3:] # b c f h w
-        cond_eps, uncond_eps = torch.split(eps, len(eps) // 2, dim=0)
-        cond_eps_, uncond_eps_ = torch.split(eps_, len(eps_) // 2, dim=0)
-        if not use_mask:
-            half_eps = uncond_eps + cfg_scale * (cond_eps - uncond_eps) + 3 * (cond_eps_ - uncond_eps_)
-        else:
-            half_eps = uncond_eps + cfg_scale * (cond_eps - uncond_eps) + 3 * (cond_eps_ - uncond_eps_)
-        eps = torch.cat([half_eps, half_eps], dim=0)
-        return torch.cat([eps, rest], dim=1)
-
-
-    def forward_with_cfg_3text(self,
-                        x,
-                        t,
-                        encoder_hidden_states=None,
-                        encoder_hidden_states_=None,
-                        encoder_hidden_states__=None,
-                        class_labels: Optional[torch.Tensor] = None,
-                        cfg_scale=4.0,
-                        use_fp16=False,
-                        use_mask=False):
-        """
-        Forward pass of DiT, but also batches the unconditional forward pass for classifier-free guidance.
-        """
-        # https://github.com/openai/glide-text2im/blob/main/notebooks/text2im.ipynb
-        half = x[: len(x) // 2]
-        combined = torch.cat([half, half], dim=0)
-        if use_fp16:
-            combined = combined.to(dtype=torch.float16)
-        model_out = self.forward(combined, t, encoder_hidden_states, class_labels).sample
-        model_out_ = self.forward(combined, t, encoder_hidden_states_, class_labels).sample
-        model_out__ = self.forward(combined, t, encoder_hidden_states__, class_labels).sample
-        # For exact reproducibility reasons, we apply classifier-free guidance on only
-        # three channels by default. The standard approach to cfg applies it to all channels.
-        # This can be done by uncommenting the following line and commenting-out the line following that.
-        eps, rest = model_out[:, :4], model_out[:, 4:]
-        eps_, rest_ = model_out_[:, :4], model_out_[:, 4:]
-        eps__, rest__ = model_out__[:, :4], model_out__[:, 4:]
-        # eps, rest = model_out[:, :3], model_out[:, 3:] # b c f h w
-        cond_eps, uncond_eps = torch.split(eps, len(eps) // 2, dim=0)
-        cond_eps_, uncond_eps_ = torch.split(eps_, len(eps_) // 2, dim=0)
-        cond_eps__, uncond_eps__ = torch.split(eps__, len(eps__) // 2, dim=0)
-        if not use_mask:
-            half_eps = uncond_eps + cfg_scale * (cond_eps - uncond_eps) + 8 * (cond_eps_ - uncond_eps_) + 8 * (cond_eps__ - uncond_eps__)
-        else:
-            half_eps = uncond_eps + cfg_scale * (cond_eps - uncond_eps) + 3 * (cond_eps_ - uncond_eps_) + 3 * (
-                        cond_eps__ - uncond_eps__)
-        eps = torch.cat([half_eps, half_eps], dim=0)
-        return torch.cat([eps, rest], dim=1)
-    
-    def forward_with_cfg_temp_split(self, 
-                        x, 
-                        t, 
-                        encoder_hidden_states=None,
-                        class_labels: Optional[torch.Tensor]=None,
-                        scfg_scale=4.0,
-                        tcfg_scale=4.0,
-                        use_fp16=False,
-                        ip_hidden_states=None,
-                        encoder_temporal_hidden_states=None):
-        """
-        Forward pass of DiT, but also batches the unconditional forward pass for classifier-free guidance.
-        """
-        # https://github.com/openai/glide-text2im/blob/main/notebooks/text2im.ipynb
-        half = x[: len(x) // 3]
-        combined = torch.cat([half, half, half], dim=0)
-        if use_fp16:
-            combined = combined.to(dtype=torch.float16)
-        model_out = self.forward(combined, t, encoder_hidden_states, class_labels, ip_hidden_states=ip_hidden_states, encoder_temporal_hidden_states=encoder_temporal_hidden_states).sample
-        # For exact reproducibility reasons, we apply classifier-free guidance on only
-        # three channels by default. The standard approach to cfg applies it to all channels.
-        # This can be done by uncommenting the following line and commenting-out the line following that.
-        eps, rest = model_out[:, :4], model_out[:, 4:]
-        # eps, rest = model_out[:, :3], model_out[:, 3:] # b c f h w
-        st_cond_eps, s_cond_eps, uncond_eps = torch.split(eps, len(eps) // 3, dim=0)
-        half_eps = uncond_eps + scfg_scale * (s_cond_eps - uncond_eps) + tcfg_scale * (st_cond_eps - s_cond_eps)
-        eps = torch.cat([half_eps, half_eps, half_eps], dim=0)
         return torch.cat([eps, rest], dim=1)
 
     @classmethod

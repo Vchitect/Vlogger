@@ -108,13 +108,7 @@ class CrossAttention(nn.Module):
         self.use_relative_position = use_relative_position
         if self.use_relative_position:
             self.rotary_emb = RotaryEmbedding(min(32, dim_head))
-        #     # print(dim_head)
-        #     # print(heads)
-        #     # adopt https://github.com/huggingface/transformers/blob/8a817e1ecac6a420b1bdc701fcc33535a3b96ff5/src/transformers/models/bert/modeling_bert.py#L265
-        #     self.max_position_embeddings = 32
-        #     self.distance_embedding = nn.Embedding(2 * self.max_position_embeddings - 1, dim_head)
 
-        #     self.dropout = nn.Dropout(dropout)
         self.ip_transformed = False
         self.ip_scale = 1
     
@@ -176,11 +170,9 @@ class CrossAttention(nn.Module):
 
         query = self.to_q(hidden_states) # [b (h w)] f (nd * d)
 
-        # print('before reshpape query shape', query.shape)
         dim = query.shape[-1]
         if not self.use_relative_position:
             query = self.reshape_heads_to_batch_dim(query) # [b (h w) nd] f d
-        # print('after reshape query shape', query.shape)
 
         if self.added_kv_proj_dim is not None:
             key = self.to_k(hidden_states)
@@ -266,34 +258,16 @@ class CrossAttention(nn.Module):
             alpha=self.scale,
         )
 
-        # print('query shape', query.shape)
-        # print('key shape', key.shape)
-        # print('value shape', value.shape)
-
         if attention_mask is not None:
-            # print('attention_mask', attention_mask.shape)
-            # print('attention_scores', attention_scores.shape)
-            # exit()
             attention_scores = attention_scores + attention_mask
 
         if self.upcast_softmax:
             attention_scores = attention_scores.float()
 
         attention_probs = attention_scores.softmax(dim=-1)
-        # print(attention_probs.shape)
-
-        # cast back to the original dtype
         attention_probs = attention_probs.to(value.dtype)
-        # print(attention_probs.shape)
-
-        # compute attention output
         hidden_states = torch.bmm(attention_probs, value)
-        # print(hidden_states.shape)
-
-        # reshape hidden_states
         hidden_states = self.reshape_batch_dim_to_heads(hidden_states)
-        # print(hidden_states.shape)
-        # exit()
         return hidden_states
 
     def _sliced_attention(self, query, key, value, sequence_length, dim, attention_mask):
@@ -539,18 +513,6 @@ class BasicTransformerBlock(nn.Module):
         )
         self.norm1 = AdaLayerNorm(dim, num_embeds_ada_norm) if self.use_ada_layer_norm else nn.LayerNorm(dim)
 
-        # # SC-Attn
-        # self.attn1 = SparseCausalAttention(
-        #     query_dim=dim,
-        #     heads=num_attention_heads,
-        #     dim_head=attention_head_dim,
-        #     dropout=dropout,
-        #     bias=attention_bias,
-        #     cross_attention_dim=cross_attention_dim if only_cross_attention else None,
-        #     upcast_attention=upcast_attention,
-        # )
-        # self.norm1 = AdaLayerNorm(dim, num_embeds_ada_norm) if self.use_ada_layer_norm else nn.LayerNorm(dim)
-
         # Text Cross-Attn
         if cross_attention_dim is not None:
             self.attn2 = CrossAttention(
@@ -632,10 +594,6 @@ class BasicTransformerBlock(nn.Module):
             self.attn1._use_memory_efficient_attention_xformers = use_memory_efficient_attention_xformers
             if self.attn2 is not None:
                 self.attn2._use_memory_efficient_attention_xformers = use_memory_efficient_attention_xformers
-            # self.attn_fcross._use_memory_efficient_attention_xformers = use_memory_efficient_attention_xformers
-            # self.attn_temp._use_memory_efficient_attention_xformers = use_memory_efficient_attention_xformers
-
-            # self.cross_attn_temp._use_memory_efficient_attention_xformers = use_memory_efficient_attention_xformers
 
     def forward(self, hidden_states, encoder_hidden_states=None, timestep=None, attention_mask=None, video_length=None, use_image_num=None, ip_hidden_states=None, encoder_temporal_hidden_states=None):
         # SparseCausal-Attention
@@ -655,8 +613,6 @@ class BasicTransformerBlock(nn.Module):
             norm_hidden_states = (
                 self.norm2(hidden_states, timestep) if self.use_ada_layer_norm else self.norm2(hidden_states)
             )
-            # print(encoder_hidden_states.shape)
-            # print(ip_hidden_states.shape)
             hidden_states = (
                 self.attn2(
                     norm_hidden_states, encoder_hidden_states=encoder_hidden_states, attention_mask=attention_mask, ip_hidden_states=ip_hidden_states
@@ -694,7 +650,6 @@ class BasicTransformerBlock(nn.Module):
             norm_hidden_states = (
                 self.norm_temp(hidden_states, timestep) if self.use_ada_layer_norm else self.norm_temp(hidden_states)
             )
-            # print(norm_hidden_states.shape)
             hidden_states = self.attn_temp(norm_hidden_states) + hidden_states
 
             # Temporal Cross Attention
@@ -785,13 +740,9 @@ class SparseCausalAttention(CrossAttention):
             hidden_states = self.group_norm(hidden_states.transpose(1, 2)).transpose(1, 2)
 
         query = self.to_q(hidden_states) # [b (h w)] f (nd * d)
-        # if self.use_relative_position:
-        #     print('before attention query shape', query.shape)
         dim = query.shape[-1]
         if not self.use_relative_position:
             query = self.reshape_heads_to_batch_dim(query) # [b (h w) nd] f d
-        # if self.use_relative_position:
-        #     print('before attention query shape', query.shape)
 
         if self.added_kv_proj_dim is not None:
             key = self.to_k(hidden_states)
@@ -851,11 +802,9 @@ class SparseCausalAttention(CrossAttention):
                             encoder_hidden_states=encoder_hidden_states, 
                             attention_mask=attention_mask, 
                             video_length=video_length)
-            # print('hidden_states_video', hidden_states_video.shape)
             hidden_states_image = self.forward_image(hidden_states=hidden_states_image, 
                                                     encoder_hidden_states=encoder_hidden_states, 
                                                     attention_mask=attention_mask)
-            # print('hidden_states_image', hidden_states_image.shape)
             hidden_states = torch.cat([hidden_states_video, hidden_states_image], dim=0)
             return hidden_states
             # exit()
@@ -943,16 +892,9 @@ class TemporalAttention(CrossAttention):
             query = query.float()
             key = key.float()
 
-        # print('query shape', query.shape)
-        # print('key shape', key.shape)
-        # print('value shape', value.shape)
-        # reshape for adding time positional bais
         query = self.scale * rearrange(query, 'b f (h d) -> b h f d', h=self.heads) # d: dim_head; n: heads
         key = rearrange(key, 'b f (h d) -> b h f d', h=self.heads) # d: dim_head; n: heads
         value = rearrange(value, 'b f (h d) -> b h f d', h=self.heads) # d: dim_head; n: heads
-        # print('query shape', query.shape)
-        # print('key shape', key.shape)
-        # print('value shape', value.shape)
 
         # torch.baddbmm only accepte 3-D tensor
         # https://runebook.dev/zh/docs/pytorch/generated/torch.baddbmm
@@ -962,18 +904,8 @@ class TemporalAttention(CrossAttention):
             key = self.rotary_emb.rotate_queries_or_keys(key)
 
         attention_scores = torch.einsum('... h i d, ... h j d -> ... h i j', query, key)
-        # print('attention_scores shape', attention_scores.shape)
-        # print('time_rel_pos_bias shape', time_rel_pos_bias.shape)
-        # print('attention_mask shape', attention_mask.shape)
 
         attention_scores = attention_scores + time_rel_pos_bias
-        # print(attention_scores.shape)
-
-        # bert from huggin face
-        # attention_scores = attention_scores / math.sqrt(self.dim_head)
-
-        # # Normalize the attention scores to probabilities.
-        # attention_probs = nn.functional.softmax(attention_scores, dim=-1)
 
         if attention_mask is not None:
             # add attention mask
@@ -989,13 +921,8 @@ class TemporalAttention(CrossAttention):
         attention_probs = attention_probs.to(value.dtype)
 
         # compute attention output 
-        # hidden_states = torch.matmul(attention_probs, value)
         hidden_states = torch.einsum('... h i j, ... h j d -> ... h i d', attention_probs, value)
-        # print(hidden_states.shape)
-        # hidden_states = self.same_batch_dim_to_heads(hidden_states)
         hidden_states = rearrange(hidden_states, 'b h f d -> b f (h d)')
-        # print(hidden_states.shape)
-        # exit() 
         return hidden_states
     
 class RelativePositionBias(nn.Module):

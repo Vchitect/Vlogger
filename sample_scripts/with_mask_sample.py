@@ -243,7 +243,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config", type=str, default="./configs/with_mask_sample.yaml")
+    parser.add_argument("--config", type=str, default="configs/with_mask_sample.yaml")
     args = parser.parse_args()
     omega_conf = OmegaConf.load(args.config)
     main(omega_conf)

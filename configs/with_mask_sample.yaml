@@ -1,6 +1,6 @@
 # path config:
-ckpt: "/mnt/petrelfs/zhuangshaobin/pnp/s2l/ckpt/tca_prediction_12000_62000.pt"
-pretrained_model_path: "/mnt/petrelfs/zhuangshaobin/pnp/Large-DiT-Video-Images-V2/sd_model/"
+ckpt: "pretrained/ShowMaker.pt"
+pretrained_model_path: "pretrained/OpenCLIP-ViT-H-14"
 input_path: 'input/i2v/Planet_hits_earth.png'
 save_path: "results/mask_no_ref/"
 

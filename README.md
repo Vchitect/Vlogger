@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 Our model is based on Stable diffusion v1.4, you may download [Stable Diffusion v1-4](https://huggingface.co/CompVis/stable-diffusion-v1-4) and [OpenCLIP-ViT-H-14](https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K) to the director of ``` pretrained ```
 .
-Download our model checkpoint (from [google drive](https://drive.google.com/file/d/1pAH73kz2QRfD2Dxk4lL3SrHvLAlWcPI3/view?usp=drive_link) or [hugging face](https://huggingface.co/GrayShine/Vlogger/tree/main)) and save to the directory of ```pretrained```
+Download our model(ShowMaker) checkpoint (from [google drive](https://drive.google.com/file/d/1pAH73kz2QRfD2Dxk4lL3SrHvLAlWcPI3/view?usp=drive_link) or [hugging face](https://huggingface.co/GrayShine/Vlogger/tree/main)) and save to the directory of ```pretrained```
 
 
 Now under `./pretrained`, you should be able to see the following:
@@ -44,17 +44,34 @@ Now under `./pretrained`, you should be able to see the following:
 ```
 ## Usage
 ### Inference for (T+I)2V 
-Run the following command to get the I2V results:
+Run the following command to get the (T+I)2V results:
 ```python
 python sample_scripts/with_mask_sample.py
 ```
 The generated video will be saved in ```results/mask_no_ref```.
 ### Inference for (T+I+ref)2V 
-Run the following command to get the I2V results:
+Run the following command to get the (T+I+ref)2V results:
 ```python
 python sample_scripts/with_mask_ref_sample.py
 ```
 The generated video will be saved in ```results/mask_ref```.
+### Inference for LLM planning and make reference image
+Run the following command to get script, actors and protagonist:
+```python
+python sample_scripts/vlog_write_script.py
+```
+The generated scripts will be saved in ```results/vlog/$your_story_dir/script```.
+
+The generated reference images will be saved in ```results/vlog/$your_story_dir/img```.
+
+!!!important: Enter your openai key in the 7th line of the file ```vlogger/planning_utils/gpt4_utils.py```
+### Inference for vlog generation
+Run the following command to get the vlog:
+```python
+python sample_scripts/vlog_read_script_sample.py
+```
+The generated scripts will be saved in ```results/vlog/$your_story_dir/video```.
+
 
 #### More Details
 You may modify ```configs/with_mask_sample.yaml``` to change the (T+I)2V conditions.

@@ -1,7 +1,22 @@
 [
-{
-    "id": 1,
-    "name": "Teddy",
-    "description": "Teddy is a brown teddy bear with a friendly smile."
-}
+    {
+        "id": 1,
+        "name": "Teddy",
+        "description": "A teddy bear with a dream of traveling the world"
+    },
+    {
+        "id": 2,
+        "name": "Eiffel Tower",
+        "description": "An iconic wrought-iron lattice tower located in Paris, France"
+    },
+    {
+        "id": 3,
+        "name": "Great Wall",
+        "description": "A vast, historic fortification system that stretches across the northern part of China"
+    },
+    {
+        "id": 4,
+        "name": "Pyramids",
+        "description": "Ancient monumental structures located in Egypt"
+    }
 ]

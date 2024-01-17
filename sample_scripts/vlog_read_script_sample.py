@@ -279,7 +279,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config", type=str, default="./configs/vlog_read_script_sample.yaml")
+    parser.add_argument("--config", type=str, default="configs/vlog_read_script_sample.yaml")
     args = parser.parse_args()
     omega_conf = OmegaConf.load(args.config)
     save_path = omega_conf.save_path
@@ -289,14 +289,14 @@ if __name__ == "__main__":
     save_audio_caption_video_path = os.path.join(save_path.rsplit('/', 1)[0], "audio_caption_video")
     if omega_conf.sample_num is not None:
         for i in range(omega_conf.sample_num):
-            omega_conf.save_origin_video_path = save_path + f'-{i}'
+            omega_conf.save_origin_video_path = save_origin_video_path + f'-{i}'
             omega_conf.save_caption_video_path = save_caption_video_path + f'-{i}'
             omega_conf.save_audio_path = save_audio_path + f'-{i}'
             omega_conf.save_audio_caption_video_path = save_audio_caption_video_path + f'-{i}'
             omega_conf.seed += i
             main(omega_conf)
     else:
-        omega_conf.save_origin_video_path = save_path
+        omega_conf.save_origin_video_path = save_origin_video_path
         omega_conf.save_caption_video_path = save_caption_video_path
         omega_conf.save_audio_path = save_audio_path
         omega_conf.save_audio_caption_video_path = save_audio_caption_video_path
