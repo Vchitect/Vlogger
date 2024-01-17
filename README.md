@@ -35,7 +35,7 @@ Download our model checkpoint (from [google drive](https://drive.google.com/file
 Now under `./pretrained`, you should be able to see the following:
 ```
 ├── pretrained
-│   ├── vlogger.pt
+│   ├── ShowMaker.pt
 │   ├── stable-diffusion-v1-4
 │   ├── OpenCLIP-ViT-H-14
 │   │   ├── ...
