@@ -109,7 +109,12 @@ def get_input(args):
         else:
             raise ValueError('Please check your path input!!')
     else:
-        raise ValueError('Need to give a video or some images')
+        print('given video is None, using text to video')
+        video_frames = torch.zeros(16,3,args.latent_h,args.latent_w,dtype=torch.uint8)
+        args.mask_type = 'all'
+        video_frames = transform_video(video_frames)
+        n = 0
+        return video_frames, n
 
 def auto_inpainting(args, video_input, masked_video, mask, prompt, vae, text_encoder, diffusion, model, device,):
     b,f,c,h,w=video_input.shape
