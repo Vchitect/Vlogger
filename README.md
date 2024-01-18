@@ -99,7 +99,12 @@ For example:
   <td style="text-align:center;width: 50%" colspan="1"><b>Output Video</b></td>
 </tr>
 <tr>
-  <td><img src="examples/TR2V/image/Egyptian_Pyramids.png" width="250"></td>
+  <td><img src="examples/TR2V/image/Egyptian_Pyramids.png" width="250">
+      <br>
+      <div class="text" style=" text-align:center;">
+        Scene Reference
+      </div>
+  </td>
   <td>
       <img src="examples/TR2V/video/Fireworks_explode_over_the_pyramids.gif" width="400">
       <br>
@@ -110,7 +115,12 @@ For example:
 </tr>
 
 <tr>
-  <td><img src="examples/TR2V/image/Great_Wall.png" width="250"></td>
+  <td><img src="examples/TR2V/image/Great_Wall.png" width="250">
+      <br>
+      <div class="text" style=" text-align:center;">
+        Scene Reference
+      </div>
+  </td>
   <td>
       <img src="examples/TR2V/video/The_Great_Wall_burning_with_raging_fire.gif" width="400">
       <br>
@@ -121,7 +131,12 @@ For example:
 </tr>
 
 <tr>
-  <td><img src="examples/TR2V/image/a_green_cat.png" width="250"></td>
+  <td><img src="examples/TR2V/image/a_green_cat.png" width="250">
+      <br>
+      <div class="text" style=" text-align:center;">
+        Object Reference
+      </div>
+  </td>
   <td>
       <img src="examples/TR2V/video/A_cat_is_running_on_the_beach.gif" width="400">
       <br>
