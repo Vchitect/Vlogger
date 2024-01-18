@@ -66,8 +66,8 @@ Run the following command to get the (T+I)2V results:
 python sample_scripts/with_mask_sample.py
 ```
 The generated video will be saved in ```results/mask_no_ref```.
-### Inference for (T+I+ref)2V 
-Run the following command to get the (T+I+ref)2V results:
+### Inference for (T+I+Ref)2V 
+Run the following command to get the (T+I+Ref)2V results:
 ```python
 python sample_scripts/with_mask_ref_sample.py
 ```
@@ -77,7 +77,7 @@ The generated video will be saved in ```results/mask_ref```.
 #### More Details
 You may modify ```configs/with_mask_sample.yaml``` to change the (T+I)2V conditions.
 
-You may modify ```configs/with_mask_ref_sample.yaml``` to change the (T+I+ref)2V conditions.
+You may modify ```configs/with_mask_ref_sample.yaml``` to change the (T+I+Ref)2V conditions.
 For example:
 
 ```ckpt``` is used to specify a model checkpoint.
