@@ -92,7 +92,7 @@ For example:
 
 
 ## Results
-### (T+ref)2V Results
+### (T+Ref)2V Results
 <table class="center">
 <tr>
   <td style="text-align:center;width: 50%" colspan="1"><b>Reference Image</b></td>
