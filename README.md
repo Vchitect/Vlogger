@@ -104,7 +104,7 @@ For example:
       <img src="example/TR2V/video/Fireworks_explode_over_the_pyramids.gif" width="400">
       <br>
       <div class="text" style=" text-align:center;">
-        Underwater environment cosmetic bottles.
+        Fireworks explode over the pyramids.
       </div>
   </td>
 </tr>
@@ -115,7 +115,7 @@ For example:
       <img src="example/TR2V/video/The_Great_Wall_burning_with_raging_fire.gif" width="400">
       <br>
       <div class="text" style=" text-align:center;">
-        A big drop of water falls on a rose petal.
+        The Great Wall burning with raging fire.
       </div>
   </td>
 </tr>
@@ -126,7 +126,7 @@ For example:
       <img src="example/TR2V/video/A_cat_is_running_on_the_beach.gif" width="400">
       <br>
       <div class="text" style=" text-align:center;">
-        A fish swims past an oriental woman.
+        A cat is running on the beach.
       </div>
   </td>
 </tr>
