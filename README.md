@@ -199,7 +199,7 @@ For example:
 @article{zhuang2024vlogger,
 title={Vlogger: Make Your Dream A Vlog},
 author={Zhuang, Shaobin and Li, Kunchang and Chen, Xinyuan and Wang, Yaohui and Liu, Ziwei and Qiao, Yu and Wang, Yali},
-journal={arXiv preprint arXiv:2310.20700},
+journal={arXiv preprint arXiv:2401.09414},
 year={2024}
 }
 ```
