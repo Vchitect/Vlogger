@@ -92,6 +92,47 @@ For example:
 
 
 ## Results
+### (T+ref)2V Results
+<table class="center">
+<tr>
+  <td style="text-align:center;width: 50%" colspan="1"><b>Reference Image</b></td>
+  <td style="text-align:center;width: 50%" colspan="1"><b>Output Video</b></td>
+</tr>
+<tr>
+  <td><img src="example/TR2V/image/Egyptian_Pyramids.png" width="400"></td>
+  <td>
+      <img src="example/TR2V/video/Fireworks_explode_over_the_pyramids.gif" width="400">
+      <br>
+      <div class="text" style=" text-align:center;">
+        Underwater environment cosmetic bottles.
+      </div>
+  </td>
+</tr>
+
+<tr>
+  <td><img src="example/TR2V/image/Great_Wall.png" width="400"></td>
+  <td>
+      <img src="example/TR2V/video/The_Great_Wall_burning_with_raging_fire.gif" width="400">
+      <br>
+      <div class="text" style=" text-align:center;">
+        A big drop of water falls on a rose petal.
+      </div>
+  </td>
+</tr>
+
+<tr>
+  <td><img src="example/TR2V/image/a_green_cat.png" width="400"></td>
+  <td>
+      <img src="example/TR2V/video/A_cat_is_running_on_the_beach.gif" width="400">
+      <br>
+      <div class="text" style=" text-align:center;">
+        A fish swims past an oriental woman.
+      </div>
+  </td>
+</tr>
+
+</table>
+
 ### (T+I)2V Results
 <table class="center">
 <tr>
