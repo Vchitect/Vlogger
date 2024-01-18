@@ -109,9 +109,10 @@ For example:
   <td>
       <img src="examples/TR2V/video/Fireworks_explode_over_the_pyramids.gif" width="400">
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         Fireworks explode over the pyramids.
-      </div>
+      </div> -->
+          <p align="center">Fireworks explode over the pyramids.</p>
   </td>
 </tr>
 
@@ -126,9 +127,10 @@ For example:
   <td>
       <img src="examples/TR2V/video/The_Great_Wall_burning_with_raging_fire.gif" width="400">
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         The Great Wall burning with raging fire.
-      </div>
+      </div> -->
+          <p align="center">The Great Wall burning with raging fire.</p>
   </td>
 </tr>
 
@@ -143,9 +145,10 @@ For example:
   <td>
       <img src="examples/TR2V/video/A_cat_is_running_on_the_beach.gif" width="400">
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         A cat is running on the beach.
-      </div>
+      </div> -->
+          <p align="center">A cat is running on the beach.</p>
   </td>
 </tr>
 
@@ -162,9 +165,10 @@ For example:
   <td>
       <img src="examples/TI2V/Underwater_environment_cosmetic_bottles.gif" width="400">
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         Underwater environment cosmetic bottles.
-      </div>
+      </div> -->
+          <p align="center">Underwater environment cosmetic bottles.</p>
   </td>
 </tr>
 
@@ -173,9 +177,10 @@ For example:
   <td>
       <img src="examples/TI2V/A_big_drop_of_water_falls_on_a_rose_petal.gif" width="400">
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         A big drop of water falls on a rose petal.
-      </div>
+      </div> -->
+          <p align="center">A big drop of water falls on a rose petal.</p>
   </td>
 </tr>
 
@@ -184,9 +189,10 @@ For example:
   <td>
       <img src="examples/TI2V/A_fish_swims_past_an_oriental_woman.gif" width="400">
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         A fish swims past an oriental woman.
-      </div>
+      </div> -->
+          <p align="center">A fish swims past an oriental woman.</p>
   </td>
 </tr>
 
@@ -195,9 +201,10 @@ For example:
   <td>
       <img src="examples/TI2V/Cinematic_photograph_View_of_piloting_aaero.gif" width="400">
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         Cinematic photograph. View of piloting aaero.
-      </div>
+      </div> -->
+          <p align="center">Cinematic photograph. View of piloting aaero.</p>
   </td>
 </tr>
 
@@ -206,9 +213,10 @@ For example:
   <td>
       <img src="examples/TI2V/Planet_hits_earth.gif" width="400">
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         Planet hits earth.
-      </div>
+      </div> -->
+          <p align="center">Planet hits earth.</p>
   </td>
 </tr>
 </table>
@@ -223,32 +231,36 @@ For example:
   <td>
       <img src="examples/T2V/A_deer_looks_at_the_sunset_behind_him.gif"/>
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         A deer looks at the sunset behind him.
-      </div>
+      </div> -->
+          <p align="center">A deer looks at the sunset behind him.</p>
   </td>
   <td>
       <img src="examples/T2V/A_duck_is_teaching_math_to_another_duck.gif"/>
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         A duck is teaching math to another duck.
-      </div>
+      </div> -->
+          <p align="center">A duck is teaching math to another duck.</p>
   </td>
 </tr>
 <tr>
   <td>
       <img src="examples/T2V/Bezos_explores_tropical_rainforest.gif"/>
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         Bezos explores tropical rainforest.
-      </div>
+      </div> -->
+          <p align="center">Bezos explores tropical rainforest.</p>
   </td>
   <td>
       <img src="examples/T2V/Light_blue_water_lapping_on_the_beach.gif"/>
       <br>
-      <div class="text" style=" text-align:center;">
+<!--       <div class="text" style=" text-align:center;">
         A deer looks at the sunset behind him.
-      </div>
+      </div> -->
+          <p align="center">A deer looks at the sunset behind him.</p>
   </td>
 </tr>
 
