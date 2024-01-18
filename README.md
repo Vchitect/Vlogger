@@ -43,18 +43,6 @@ Now under `./pretrained`, you should be able to see the following:
         ├── ...
 ```
 ## Usage
-### Inference for (T+I)2V 
-Run the following command to get the (T+I)2V results:
-```python
-python sample_scripts/with_mask_sample.py
-```
-The generated video will be saved in ```results/mask_no_ref```.
-### Inference for (T+I+ref)2V 
-Run the following command to get the (T+I+ref)2V results:
-```python
-python sample_scripts/with_mask_ref_sample.py
-```
-The generated video will be saved in ```results/mask_ref```.
 ### Inference for LLM planning and make reference image
 Run the following command to get script, actors and protagonist:
 ```python
@@ -71,6 +59,19 @@ Run the following command to get the vlog:
 python sample_scripts/vlog_read_script_sample.py
 ```
 The generated scripts will be saved in ```results/vlog/$your_story_dir/video```.
+
+### Inference for (T+I)2V 
+Run the following command to get the (T+I)2V results:
+```python
+python sample_scripts/with_mask_sample.py
+```
+The generated video will be saved in ```results/mask_no_ref```.
+### Inference for (T+I+ref)2V 
+Run the following command to get the (T+I+ref)2V results:
+```python
+python sample_scripts/with_mask_ref_sample.py
+```
+The generated video will be saved in ```results/mask_ref```.
 
 
 #### More Details
