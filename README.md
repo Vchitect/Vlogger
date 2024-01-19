@@ -256,9 +256,9 @@ For example:
       <img src="examples/T2V/Light_blue_water_lapping_on_the_beach.gif"/>
       <br>
 <!--       <div class="text" style=" text-align:center;">
-        A deer looks at the sunset behind him.
+        Light blue water lapping on the beach.
       </div> -->
-          <p align="center">A deer looks at the sunset behind him.</p>
+          <p align="center">Light blue water lapping on the beach.</p>
   </td>
 </tr>
 
