@@ -14,7 +14,6 @@ omegaconf==2.3.0
 openai==0.27.8
 opencv_python==4.7.0.72
 Pillow==9.4.0
-Pillow==10.2.0
 pytorch_lightning==2.0.2
 rotary_embedding_torch==0.2.3
 soundfile==0.12.1
