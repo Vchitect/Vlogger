@@ -104,26 +104,24 @@ Run the following command to get the (T+I+Ref)2V results:
 python sample_scripts/with_mask_ref_sample.py
 ```
 
-The generated video will be saved in ```results/mask_ref```.
+- The generated video will be saved in ```results/mask_ref```.
 </details>
 
 <details>
   <summary><h3>More Details</h3></summary>
         
-You may modify ```configs/with_mask_sample.yaml``` to change the (T+I)2V conditions.
-
-You may modify ```configs/with_mask_ref_sample.yaml``` to change the (T+I+Ref)2V conditions.
+You may modify ```configs/with_mask_sample.yaml``` to change the (T+I)2V conditions and modify ```configs/with_mask_ref_sample.yaml``` to change the (T+I+Ref)2V conditions.
 For example:
 
-```ckpt``` is used to specify a model checkpoint.
+- ```ckpt``` is used to specify a model checkpoint.
 
-```text_prompt``` is used to describe the content of the video.
+- ```text_prompt``` is used to describe the content of the video.
 
-```input_path``` is used to specify the path to the image.
+- ```input_path``` is used to specify the path to the image.
 
-```ref_path``` is used to specify the path to the reference image.
+- ```ref_path``` is used to specify the path to the reference image.
 
-```save_path``` is used to specify the path to the generated video.
+- ```save_path``` is used to specify the path to the generated video.
 </details>
 
 
@@ -313,6 +311,9 @@ year={2024}
 }
 ```
 
+<details>
+  <summary>SEINE</summary>
+
 ```bibtex
 @article{chen2023seine,
 title={SEINE: Short-to-Long Video Diffusion Model for Generative Transition and Prediction},
@@ -321,6 +322,10 @@ journal={arXiv preprint arXiv:2310.20700},
 year={2023}
 }
 ```
+</details>
+
+<details>
+  <summary>LAVIE</summary>
 
 ```bibtex
 @article{wang2023lavie,
@@ -330,18 +335,16 @@ year={2023}
   year={2023}
 }
 ```
+</details>
+
 
 ## Disclaimer
 We disclaim responsibility for user-generated content. The model was not trained to realistically represent people or events, so using it to generate such content is beyond the model's capabilities. It is prohibited for pornographic, violent and bloody content generation, and to generate content that is demeaning or harmful to people or their environment, culture, religion, etc. Users are solely liable for their actions. The project contributors are not legally affiliated with, nor accountable for users' behaviors. Use the generative model responsibly, adhering to ethical and legal standards.
 
 ## Contact Us
-**Shaobin Zhuang**: [zhuangshaobin@pjlab.org.cn](mailto:zhuangshaobin@pjlab.org.cn)
+**Shaobin Zhuang**: [zhuangshaobin@pjlab.org.cn](mailto:zhuangshaobin@pjlab.org.cn), **Kunchang Li**: [likunchang@pjlab.org.cn](mailto:likunchang@pjlab.org.cn)
 
-**Kunchang Li**: [likunchang@pjlab.org.cn](mailto:likunchang@pjlab.org.cn)
-
-**Xinyuan Chen**: [chenxinyuan@pjlab.org.cn](mailto:chenxinyuan@pjlab.org.cn)
-
-**Yaohui Wang**: [wangyaohui@pjlab.org.cn](mailto:wangyaohui@pjlab.org.cn)  
+**Xinyuan Chen**: [chenxinyuan@pjlab.org.cn](mailto:chenxinyuan@pjlab.org.cn), **Yaohui Wang**: [wangyaohui@pjlab.org.cn](mailto:wangyaohui@pjlab.org.cn)  
 
 ## Acknowledgements
 The code is built upon [SEINE](https://github.com/Vchitect/SEINE), [LaVie](https://github.com/Vchitect/LaVie), [diffusers](https://github.com/huggingface/diffusers) and [Stable Diffusion](https://github.com/CompVis/stable-diffusion), we thank all the contributors for open-sourcing. 
