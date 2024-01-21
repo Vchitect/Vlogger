@@ -128,7 +128,7 @@ def clip_grad_norm_(
 
 def separation_content_motion(video_clip):
     """
-    separate coontent and motion in a given video
+    separate content and motion in a given video
     Args:
         video_clip, a give video clip, [B F C H W]
 
