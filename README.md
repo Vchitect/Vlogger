@@ -314,9 +314,6 @@ year={2024}
 }
 ```
 
-<details>
-  <summary>SEINE</summary>
-
 ```bibtex
 @article{chen2023seine,
 title={SEINE: Short-to-Long Video Diffusion Model for Generative Transition and Prediction},
@@ -325,10 +322,6 @@ journal={arXiv preprint arXiv:2310.20700},
 year={2023}
 }
 ```
-</details>
-
-<details>
-  <summary>LAVIE</summary>
 
 ```bibtex
 @article{wang2023lavie,
@@ -338,7 +331,6 @@ year={2023}
   year={2023}
 }
 ```
-</details>
 
 
 ## Disclaimer
