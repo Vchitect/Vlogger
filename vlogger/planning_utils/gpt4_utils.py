@@ -23,7 +23,7 @@ def json_completion(prompt):
         try:
             smart_openai_key()
             completions = openai.ChatCompletion.create(
-                model="gpt-4",
+                model="gpt-4",  # "gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "You are a helpful assistant."},
                     {"role": "user", "content": prompt},
