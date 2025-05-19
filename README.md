@@ -1,7 +1,6 @@
 <div align="center">
 
-<a href="https://arxiv.org/abs/2401.09414">
-<img width="743" alt="image" src="https://github.com/zhuangshaobin/Vlogger/assets/24236723/2885982e-5b18-48b3-97b1-966298329350">
+<h1 align="center">Vlogger: Make Your Dream A Vlog</h1>
 </a>
 
 [Shaobin Zhuang](https://github.com/zhuangshaobin), [Kunchang Li](https://scholar.google.com/citations?user=D4tLSbsAAAAJ), [Xinyuan Chen†](https://scholar.google.com/citations?user=3fWSC8YAAAAJ), [Yaohui Wang†](https://scholar.google.com/citations?user=R7LyAb4AAAAJ), [Ziwei Liu](https://scholar.google.com/citations?user=lc45xlcAAAAJ), [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl), [Yali Wang†](https://scholar.google.com/citations?user=hD948dkAAAAJ)
@@ -11,7 +10,7 @@
 [![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-yellow)](https://huggingface.co/GrayShine/Vlogger)
 [![Hugging Face Space](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-yellow)](https://huggingface.co/spaces/GrayShine/Vlogger-ShowMaker)
 [![YouTube Video](https://img.shields.io/badge/YouTube-Video-red)](https://youtu.be/ZRD1-jHbEGk)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzhuangshaobin%2FVlogger&count_bg=%23F59352&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
+
 </div>
 </div>
 
